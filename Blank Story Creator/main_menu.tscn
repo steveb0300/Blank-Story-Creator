@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxobwpe63tp4x"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_vmmt3"]
+[ext_resource type="Texture2D" uid="uid://d2xeq0m4ebrjs" path="res://art/paper.jpg" id="2_3dhh6"]
+[ext_resource type="Texture2D" uid="uid://darl8ykkyuwcc" path="res://app_title.png" id="3_ik0qj"]
+[ext_resource type="Texture2D" uid="uid://0mlq8sc5pb0v" path="res://grass2.png" id="4_3at54"]
+[ext_resource type="Texture2D" uid="uid://dssf5ejv0dscm" path="res://grass.png" id="4_nec3l"]
+[ext_resource type="Texture2D" uid="uid://dgvndq0m64xoq" path="res://egg.png" id="5_garcv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cfk7"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+shadow_color = Color(0, 0, 0, 0.360784)
+shadow_size = 12
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_vmmt3")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(7.62939e-06, -2)
+scale = Vector2(0.101088, 0.123856)
+texture = ExtResource("2_3dhh6")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, -17.3204, 4778.31, 5844.4)
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(239, 142.981)
+scale = Vector2(0.607843, 0.389786)
+texture = ExtResource("3_ik0qj")
+
+[node name="Grass2" type="Sprite2D" parent="."]
+position = Vector2(270.5, 636)
+scale = Vector2(0.0583949, 0.107798)
+texture = ExtResource("4_3at54")
+flip_h = true
+
+[node name="Egg" type="Sprite2D" parent="."]
+position = Vector2(385, 549)
+rotation = 0.293215
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_garcv")
+centered = false
+region_rect = Rect2(0, 0, 200, 200)
+
+[node name="Grass" type="Sprite2D" parent="."]
+position = Vector2(263, 658)
+scale = Vector2(0.079023, 0.104931)
+texture = ExtResource("4_nec3l")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(480, 300)
+offset_left = -4.0
+offset_top = 277.0
+offset_right = 476.0
+offset_bottom = 577.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="StoryOneButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cfk7")
+text = "Create Story 1"
+
+[node name="StoryTwoButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cfk7")
+text = "Create Story 2"
+
+[node name="StoryThreeButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cfk7")
+text = "Create Story 3"
+
+[connection signal="pressed" from="VBoxContainer/StoryOneButton" to="." method="_on_story_one_button_pressed"]
