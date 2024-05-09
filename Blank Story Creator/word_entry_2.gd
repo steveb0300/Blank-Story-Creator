@@ -20,7 +20,7 @@ func _process(delta):
 
 # Called when the story button is clicked
 # The function sets all the entry fields text to global text variables
-func _on_story_one_button_pressed():
+func _on_story_two_button_pressed():
 	Global.text_1 = $"HBoxContainer/Text Entry Container/Entry 1".get_text()
 	Global.text_2 = $"HBoxContainer/Text Entry Container/Entry 2".get_text()
 	Global.text_3 = $"HBoxContainer/Text Entry Container/Entry 3".get_text()
@@ -36,4 +36,4 @@ func _on_story_one_button_pressed():
 	Global.text_13 = $"HBoxContainer/Text Entry Container/Entry 13".get_text()
 	
 	# Call the global go to scene function to switch scenes
-	Global.goto_scene("res://story_one.tscn")
+	Global.goto_scene("res://story_two.tscn")

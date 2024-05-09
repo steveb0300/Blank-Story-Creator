@@ -1,9 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5ofl64mvax21"]
+[gd_scene load_steps=4 format=3 uid="uid://wbtyh7k67t3x"]
 
-[ext_resource type="Script" path="res://word_entry.gd" id="1_lgurh"]
-[ext_resource type="Texture2D" uid="uid://d2xeq0m4ebrjs" path="res://art/paper.jpg" id="2_k33ed"]
+[ext_resource type="Script" path="res://word_entry_2.gd" id="1_sladx"]
+[ext_resource type="Texture2D" uid="uid://d2xeq0m4ebrjs" path="res://art/paper.jpg" id="2_2bvoc"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j1tx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5c2dc"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 6
 border_width_top = 6
@@ -15,13 +15,13 @@ expand_margin_right = 4.0
 shadow_color = Color(0, 0, 0, 0.360784)
 shadow_size = 12
 
-[node name="Word Entry" type="Node2D"]
-script = ExtResource("1_lgurh")
+[node name="Word Entry 2" type="Node2D"]
+script = ExtResource("1_sladx")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_repeat = 2
 scale = Vector2(0.100964, 0.1)
-texture = ExtResource("2_k33ed")
+texture = ExtResource("2_2bvoc")
 centered = false
 region_enabled = true
 region_rect = Rect2(-18.8474, -20.5049, 4774.12, 7211.54)
@@ -59,14 +59,14 @@ horizontal_alignment = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Pural Noun: "
+text = "Adjective: "
 horizontal_alignment = 2
 
 [node name="Label 4" type="Label" parent="HBoxContainer/Label Container"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Adjective: "
+text = "Verb [past tense]: "
 horizontal_alignment = 2
 
 [node name="Label 5" type="Label" parent="HBoxContainer/Label Container"]
@@ -80,14 +80,14 @@ horizontal_alignment = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Animal: "
+text = "Noun: "
 horizontal_alignment = 2
 
 [node name="Label 7" type="Label" parent="HBoxContainer/Label Container"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Liquid: "
+text = "Adjective: "
 horizontal_alignment = 2
 
 [node name="Label 8" type="Label" parent="HBoxContainer/Label Container"]
@@ -101,35 +101,35 @@ horizontal_alignment = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Color: "
+text = "Adjective: "
 horizontal_alignment = 2
 
 [node name="Label 10" type="Label" parent="HBoxContainer/Label Container"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Verb: "
+text = "Plural Noun: "
 horizontal_alignment = 2
 
 [node name="Label 11" type="Label" parent="HBoxContainer/Label Container"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Adjective: "
+text = "Plural Noun: "
 horizontal_alignment = 2
 
 [node name="Label 12" type="Label" parent="HBoxContainer/Label Container"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Emotion: "
+text = "Adjective: "
 horizontal_alignment = 2
 
 [node name="Label 13" type="Label" parent="HBoxContainer/Label Container"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 20
-text = "Adjective: "
+text = "Noun: "
 horizontal_alignment = 2
 
 [node name="Text Entry Container" type="VBoxContainer" parent="HBoxContainer"]
@@ -228,7 +228,7 @@ placeholder_text = "Enter Answer"
 expand_to_text_length = true
 caret_blink = true
 
-[node name="StoryOneButton" type="Button" parent="."]
+[node name="StoryTwoButton" type="Button" parent="."]
 offset_left = 127.0
 offset_top = 614.0
 offset_right = 343.0
@@ -237,7 +237,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_4j1tx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5c2dc")
 text = "Create Story"
 
-[connection signal="pressed" from="StoryOneButton" to="." method="_on_story_one_button_pressed"]
+[connection signal="pressed" from="StoryTwoButton" to="." method="_on_story_two_button_pressed"]

@@ -84,13 +84,5 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_2cfk7")
 text = "Create Story 2"
 
-[node name="StoryThreeButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_2cfk7")
-text = "Create Story 3"
-
 [connection signal="pressed" from="VBoxContainer/StoryOneButton" to="." method="_on_story_one_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/StoryTwoButton" to="." method="_on_story_two_button_pressed"]
